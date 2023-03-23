@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rain Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="login">
+      <h1>Rain Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <input type="text" name="Location" placeholder="Location" required="required" ><br>
+        <input type="text" name="MinTemp" placeholder="MinTemp" required="required"><br>
+        <input type="text" name="MaxTemp" placeholder="MaxTemp" required="required"><br>
+        <input type="text" name="Rainfall" placeholder="Rainfall" required="required"><br>
+        <input type="text" name="WindGustDir" placeholder="WindGustDir" required="required"><br>
+        <input type="text" name="WindGustSpeed" placeholder="WindGustSpeed" required="required"><br>
+        <input type="text" name="WindDir9am" placeholder="WindDir9am" required="required"><br>
+        <input type="text" name="WindDir3pm" placeholder="WindDir3pm" required="required"><br>
+        <input type="text" name="WindSpeed9am" placeholder="WindSpeed9am" required="required"><br>
+        <input type="text" name="WindSpeed3pm" placeholder="WindSpeed3pm" required="required"><br>
+        <input type="text" name="Humidity9am" placeholder="Humidity9am" required="required"><br>
+        <input type="text" name="Humidity3pm" placeholder="Humidity3pm" required="required"><br>
+        <input type="text" name="Pressure9am" placeholder="Pressure9am" required="required"><br>
+        <input type="text" name="Pressure3pm" placeholder="Pressure3pm" required="required"><br>
+        <input type="text" name="Temp9am" placeholder="Temp9am" required="required"><br>
+        <input type="text" name="Temp3pm" placeholder="Temp3pm" required="required"><br>
+        <input type="text" name="RainToday" placeholder="RainToday" required="required"><br>
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    <br>
+    <br>
+</div>
+{{prediction_text}}
+</html>
+</body>
+</html>
