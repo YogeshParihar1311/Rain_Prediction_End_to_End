@@ -35,9 +35,9 @@ def predict():
     else:
         output_text = "Rain"
     return render_template("home.html",prediction_text=output_text)
-# @app.route('/trial')
-# def trial():
-#     return render_template('trial.html')
+@app.route('/trial')
+def trial():
+    return render_template('trial.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
